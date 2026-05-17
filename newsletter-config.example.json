@@ -1,0 +1,42 @@
+{
+  "publicBaseUrl": "https://torxflow-newsletters.empty-hill-4369.workers.dev",
+  "cloudflare": {
+    "assetsDirectory": "./public",
+    "projectName": "torxflow-newsletters"
+  },
+  "standardAssets": {
+    "headerPath": "public/assets/header/torxflow-news-header.png",
+    "logoPath": "public/assets/logo/torxflow-mark.png",
+    "headerUrl": "https://torxflow-newsletters.empty-hill-4369.workers.dev/assets/header/torxflow-news-header.png",
+    "logoUrl": "https://torxflow-newsletters.empty-hill-4369.workers.dev/assets/logo/torxflow-mark.png"
+  },
+  "newsletterRun": {
+    "rootPattern": "public/newsletter/YYYY-MM-DD",
+    "imagesPattern": "public/newsletter/YYYY-MM-DD/images/article-N.png",
+    "publicImageUrlPattern": "https://torxflow-newsletters.empty-hill-4369.workers.dev/newsletter/YYYY-MM-DD/images/article-N.png"
+  },
+  "articleImage": {
+    "width": 1040,
+    "height": 300,
+    "emailDisplayWidth": 520,
+    "emailDisplayHeight": 150,
+    "aspectRatio": "3.47:1",
+    "generationRule": "Generate as wide editorial newsletter banners; only light final crop/rescale to 1040x300."
+  },
+  "placeholders": {
+    "articleImageUrls": [
+      "{{ARTICLE_1_IMAGE_URL}}",
+      "{{ARTICLE_2_IMAGE_URL}}",
+      "{{ARTICLE_3_IMAGE_URL}}",
+      "{{ARTICLE_4_IMAGE_URL}}",
+      "{{ARTICLE_5_IMAGE_URL}}"
+    ],
+    "articleImageAlts": [
+      "{{ARTICLE_1_IMAGE_ALT}}",
+      "{{ARTICLE_2_IMAGE_ALT}}",
+      "{{ARTICLE_3_IMAGE_ALT}}",
+      "{{ARTICLE_4_IMAGE_ALT}}",
+      "{{ARTICLE_5_IMAGE_ALT}}"
+    ]
+  }
+}

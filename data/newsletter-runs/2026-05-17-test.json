@@ -1,4 +1,4 @@
-﻿{
+{
   "newsletter": {
     "title": "TorxFlow News",
     "subtitle": "Nieuws voor garage-eigenaren",
@@ -9,31 +9,31 @@
     {
       "index": 1,
       "title": "Artikel 1 testtitel",
-      "summary": "Korte testintroductie voor artikel 1. Dit controleert of Hermes straks de samenvatting correct in de template kan plaatsen.",
+      "summary": "Korte testintroductie voor artikel 1. Dit controleert of de template dynamisch gevuld wordt.",
       "imageAlt": "Testafbeelding artikel 1"
     },
     {
       "index": 2,
       "title": "Artikel 2 testtitel",
-      "summary": "Korte testintroductie voor artikel 2. Deze tekst vervangt de oude placeholdertekst in de email.",
+      "summary": "Korte testintroductie voor artikel 2. Deze tekst vervangt de oude placeholdertekst.",
       "imageAlt": "Testafbeelding artikel 2"
     },
     {
       "index": 3,
       "title": "Artikel 3 testtitel",
-      "summary": "Korte testintroductie voor artikel 3. De layout moet hetzelfde blijven terwijl de inhoud dynamisch wordt.",
+      "summary": "Korte testintroductie voor artikel 3. De layout moet hetzelfde blijven.",
       "imageAlt": "Testafbeelding artikel 3"
     },
     {
       "index": 4,
       "title": "Artikel 4 testtitel",
-      "summary": "Korte testintroductie voor artikel 4. Dit test ook of langere teksten netjes binnen het ontwerp blijven.",
+      "summary": "Korte testintroductie voor artikel 4. Dit test langere tekst in het ontwerp.",
       "imageAlt": "Testafbeelding artikel 4"
     },
     {
       "index": 5,
       "title": "Artikel 5 testtitel",
-      "summary": "Korte testintroductie voor artikel 5. Na renderen mogen er geen ARTICLE placeholders meer overblijven.",
+      "summary": "Korte testintroductie voor artikel 5. Na renderen mogen er geen placeholders overblijven.",
       "imageAlt": "Testafbeelding artikel 5"
     }
   ]

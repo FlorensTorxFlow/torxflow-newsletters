@@ -1,4 +1,4 @@
-﻿import fs from "node:fs/promises";
+import fs from "node:fs/promises";
 import path from "node:path";
 
 const runId = process.argv[2];
@@ -30,24 +30,6 @@ function escapeHtml(value) {
     .replaceAll("'", "&#39;");
 }
 
-function formatDutchDateFromRunId(id) {
-  const match = id.match(/^(\d{4})-(\d{2})-(\d{2})/);
-
-  if (!match) return id;
-
-  const year = Number(match[1]);
-  const month = Number(match[2]);
-  const day = Number(match[3]);
-
-  const date = new Date(Date.UTC(year, month - 1, day));
-
-  return new Intl.DateTimeFormat("nl-NL", {
-    day: "numeric",
-    month: "long",
-    year: "numeric"
-  }).format(date);
-}
-
 async function exists(filePath) {
   try {
     await fs.access(filePath);
@@ -60,7 +42,7 @@ async function exists(filePath) {
 async function readJson(filePath) {
   try {
     const raw = await fs.readFile(filePath, "utf8");
-    return JSON.parse(raw);
+    return JSON.parse(raw.replace(/^\uFEFF/, ""));
   } catch (error) {
     fail(`Could not read or parse ${filePath}: ${error.message}`);
   }
@@ -68,7 +50,6 @@ async function readJson(filePath) {
 
 function getArticleByIndex(data, index) {
   const articles = Array.isArray(data.articles) ? data.articles : [];
-
   const byIndex = articles.find((article) => Number(article.index) === index);
   if (byIndex) return byIndex;
 
@@ -82,13 +63,11 @@ function replaceToken(html, token, value) {
   return html.replaceAll(`{{${token}}}`, escapeHtml(value));
 }
 
-const templateExists = await exists(templatePath);
-if (!templateExists) {
+if (!(await exists(templatePath))) {
   fail(`Template missing: ${templatePath}`);
 }
 
 const data = await readJson(dataPath);
-
 let html = await fs.readFile(templatePath, "utf8");
 
 const publicBaseUrl =
@@ -98,14 +77,14 @@ const publicBaseUrl =
 
 const newsletter = data.newsletter || {};
 
-const replacements = {
+const newsletterReplacements = {
   NEWSLETTER_TITLE: newsletter.title || "TorxFlow News",
   NEWSLETTER_SUBTITLE: newsletter.subtitle || "Nieuws voor garage-eigenaren",
-  NEWSLETTER_DATE: newsletter.date || formatDutchDateFromRunId(runId),
+  NEWSLETTER_DATE: newsletter.date || runId,
   READ_TIME: newsletter.readTime || "4 min lezen"
 };
 
-for (const [token, value] of Object.entries(replacements)) {
+for (const [token, value] of Object.entries(newsletterReplacements)) {
   html = replaceToken(html, token, value);
 }
 
@@ -113,9 +92,8 @@ for (let i = 1; i <= 5; i++) {
   const article = getArticleByIndex(data, i);
 
   const localImagePath = path.join(imagesDir, `article-${i}.jpg`);
-  const localImageExists = await exists(localImagePath);
 
-  if (!localImageExists) {
+  if (!(await exists(localImagePath))) {
     fail(`Missing optimized image: ${localImagePath}. Run npm.cmd run images:prepare -- ${runId} first.`);
   }
 
@@ -127,19 +105,6 @@ for (let i = 1; i <= 5; i++) {
   html = replaceToken(html, `ARTICLE_${i}_IMAGE_ALT`, article.imageAlt || `TorxFlow artikel ${i}`);
   html = replaceToken(html, `ARTICLE_${i}_TITLE`, article.title || `Artikel ${i}`);
   html = replaceToken(html, `ARTICLE_${i}_SUMMARY`, article.summary || "");
-}
-
-const cta = data.cta || {};
-
-const optionalReplacements = {
-  CTA_TITLE: cta.title || "TorxFlow",
-  CTA_BODY: cta.body || "",
-  CTA_BUTTON_LABEL: cta.buttonLabel || "Talk to us",
-  CTA_BUTTON_URL: cta.buttonUrl || "https://torxflow.com/contact"
-};
-
-for (const [token, value] of Object.entries(optionalReplacements)) {
-  html = replaceToken(html, token, value);
 }
 
 const unreplacedTokens = [...new Set((html.match(/\{\{[A-Z0-9_]+\}\}/g) || []))];

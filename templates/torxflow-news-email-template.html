@@ -69,11 +69,18 @@
           <tr>
             <td class="px-inner" style="padding: 32px 40px 0 40px;">
               <h1 class="h1-title" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 800; font-size: 34px; line-height: 1.1; color: #111111; margin: 0 0 10px 0; letter-spacing: -1px;">
-                TorxFlow News
+                {{NEWSLETTER_TITLE}}
               </h1>
-              <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 1.4; color: #6B6B6B; margin: 0;">
-                Nieuws voor garage-eigenaren&nbsp;&nbsp;<span style="color:#EF4C09;">●</span>&nbsp;&nbsp;20 mei 2025
-              </p>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="left" valign="middle" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 1.4; color: #6B6B6B; margin: 0;">
+                    {{NEWSLETTER_SUBTITLE}}&nbsp;&nbsp;<span style="color:#EF4C09;">&bull;</span>&nbsp;&nbsp;{{NEWSLETTER_DATE}}
+                  </td>
+                  <td align="right" valign="middle" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 1.4; color: #6B6B6B; margin: 0; white-space: nowrap;">
+                    <span style="color:#EF4C09;">&#9719;</span>&nbsp;&nbsp;{{READ_TIME}}
+                  </td>
+                </tr>
+              </table>
             </td>
           </tr>
           <tr>
@@ -89,9 +96,9 @@
             <td class="px-inner" style="padding: 26px 40px 0 40px;">
               <!-- ARTICLE IMAGE 1: Hermes replaces this URL after uploading the generated image. -->
               <img src="{{ARTICLE_1_IMAGE_URL}}" alt="{{ARTICLE_1_IMAGE_ALT}}" width="520" height="150" style="display:block; width:100%; max-width:520px; height:150px; border-radius:16px; object-fit:cover;">
-              <h2 class="article-title" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 800; font-size: 22px; line-height: 1.25; color: #111111; margin: 18px 0 8px 0; letter-spacing: -0.3px;">Titel artikel 1</h2>
+              <h2 class="article-title" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 800; font-size: 22px; line-height: 1.25; color: #111111; margin: 18px 0 8px 0; letter-spacing: -0.3px;">{{ARTICLE_1_TITLE}}</h2>
               <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 1.55; color: #3A3A3A; margin: 0;">
-                Korte introductie van het artikel. Hier staat een samenvatting van de belangrijkste inhoud of het belangrijkste inzicht.
+                {{ARTICLE_1_SUMMARY}}
               </p>
             </td>
           </tr>
@@ -108,9 +115,9 @@
             <td class="px-inner" style="padding: 26px 40px 0 40px;">
               <!-- ARTICLE IMAGE 2: Hermes replaces this URL after uploading the generated image. -->
               <img src="{{ARTICLE_2_IMAGE_URL}}" alt="{{ARTICLE_2_IMAGE_ALT}}" width="520" height="150" style="display:block; width:100%; max-width:520px; height:150px; border-radius:16px; object-fit:cover;">
-              <h2 class="article-title" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 800; font-size: 22px; line-height: 1.25; color: #111111; margin: 18px 0 8px 0; letter-spacing: -0.3px;">Titel artikel 2</h2>
+              <h2 class="article-title" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 800; font-size: 22px; line-height: 1.25; color: #111111; margin: 18px 0 8px 0; letter-spacing: -0.3px;">{{ARTICLE_2_TITLE}}</h2>
               <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 1.55; color: #3A3A3A; margin: 0;">
-                Korte introductie van het artikel. Hier staat een samenvatting van de belangrijkste inhoud of het belangrijkste inzicht.
+                {{ARTICLE_2_SUMMARY}}
               </p>
             </td>
           </tr>
@@ -127,9 +134,9 @@
             <td class="px-inner" style="padding: 26px 40px 0 40px;">
               <!-- ARTICLE IMAGE 3: Hermes replaces this URL after uploading the generated image. -->
               <img src="{{ARTICLE_3_IMAGE_URL}}" alt="{{ARTICLE_3_IMAGE_ALT}}" width="520" height="150" style="display:block; width:100%; max-width:520px; height:150px; border-radius:16px; object-fit:cover;">
-              <h2 class="article-title" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 800; font-size: 22px; line-height: 1.25; color: #111111; margin: 18px 0 8px 0; letter-spacing: -0.3px;">Titel artikel 3</h2>
+              <h2 class="article-title" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 800; font-size: 22px; line-height: 1.25; color: #111111; margin: 18px 0 8px 0; letter-spacing: -0.3px;">{{ARTICLE_3_TITLE}}</h2>
               <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 1.55; color: #3A3A3A; margin: 0;">
-                Korte introductie van het artikel. Hier staat een samenvatting van de belangrijkste inhoud of het belangrijkste inzicht.
+                {{ARTICLE_3_SUMMARY}}
               </p>
             </td>
           </tr>
@@ -146,9 +153,9 @@
             <td class="px-inner" style="padding: 26px 40px 0 40px;">
               <!-- ARTICLE IMAGE 4: Hermes replaces this URL after uploading the generated image. -->
               <img src="{{ARTICLE_4_IMAGE_URL}}" alt="{{ARTICLE_4_IMAGE_ALT}}" width="520" height="150" style="display:block; width:100%; max-width:520px; height:150px; border-radius:16px; object-fit:cover;">
-              <h2 class="article-title" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 800; font-size: 22px; line-height: 1.25; color: #111111; margin: 18px 0 8px 0; letter-spacing: -0.3px;">Titel artikel 4</h2>
+              <h2 class="article-title" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 800; font-size: 22px; line-height: 1.25; color: #111111; margin: 18px 0 8px 0; letter-spacing: -0.3px;">{{ARTICLE_4_TITLE}}</h2>
               <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 1.55; color: #3A3A3A; margin: 0;">
-                Korte introductie van het artikel. Hier staat een samenvatting van de belangrijkste inhoud of het belangrijkste inzicht.
+                {{ARTICLE_4_SUMMARY}}
               </p>
             </td>
           </tr>
@@ -165,9 +172,9 @@
             <td class="px-inner" style="padding: 26px 40px 0 40px;">
               <!-- ARTICLE IMAGE 5: Hermes replaces this URL after uploading the generated image. -->
               <img src="{{ARTICLE_5_IMAGE_URL}}" alt="{{ARTICLE_5_IMAGE_ALT}}" width="520" height="150" style="display:block; width:100%; max-width:520px; height:150px; border-radius:16px; object-fit:cover;">
-              <h2 class="article-title" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 800; font-size: 22px; line-height: 1.25; color: #111111; margin: 18px 0 8px 0; letter-spacing: -0.3px;">Titel artikel 5</h2>
+              <h2 class="article-title" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 800; font-size: 22px; line-height: 1.25; color: #111111; margin: 18px 0 8px 0; letter-spacing: -0.3px;">{{ARTICLE_5_TITLE}}</h2>
               <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 1.55; color: #3A3A3A; margin: 0;">
-                Korte introductie van het artikel. Hier staat een samenvatting van de belangrijkste inhoud of het belangrijkste inzicht.
+                {{ARTICLE_5_SUMMARY}}
               </p>
             </td>
           </tr>
@@ -221,7 +228,7 @@
                     </tr></table>
                   </td>
                   <td align="center" valign="middle" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 12px; color: #6B6B6B; padding: 0 10px;">
-                    <strong style="color:#111111; font-weight:700;">TorxFlow</strong>&nbsp;&nbsp;<span style="color:#EF4C09;">●</span>&nbsp;&nbsp;Slimmere communicatie, sterkere garages.
+                    <strong style="color:#111111; font-weight:700;">TorxFlow</strong>&nbsp;&nbsp;<span style="color:#EF4C09;">&bull;</span>&nbsp;&nbsp;Slimmere communicatie, sterkere garages.
                   </td>
                   <td width="28" valign="middle" align="right" class="footer-mark">
                     <img src="https://torxflow-newsletters.empty-hill-4369.workers.dev/assets/logo/torxflow-mark.png" alt="" width="20" height="20" style="display:block; width:20px; height:20px;">

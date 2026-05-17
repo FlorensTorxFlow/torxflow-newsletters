@@ -1,0 +1,27 @@
+{
+  "name": "torxflow-newsletters",
+  "version": "1.0.0",
+  "description": "Dit repository host de publieke assets en webversies voor de TorxFlow News email automation.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlorensTorxFlow/torxflow-newsletters.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/FlorensTorxFlow/torxflow-newsletters/issues"
+  },
+  "homepage": "https://github.com/FlorensTorxFlow/torxflow-newsletters#readme",
+  "devDependencies": {
+    "sharp": "^0.34.5"
+  }
+}

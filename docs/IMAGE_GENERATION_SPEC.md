@@ -12,7 +12,7 @@ Elke artikelafbeelding moet eruitzien als een brede newsletter-banner, niet als 
 Width: 1040 px
 Height: 300 px
 Aspect ratio: 3.47:1
-Format: PNG or JPG
+Format: final email output must be JPG
 Display in email: 520 x 150 px
 ```
 
@@ -87,37 +87,54 @@ Als de generator niet exact 1040 x 300 kan leveren:
 2. Center-crop naar 3.47:1
 3. Resize naar 1040 x 300
 4. Visueel checken: subject niet afgesneden
-5. Compress
+5. Convert to JPG
+6. Compress to 200–350 KB preferred, 350 KB max target
+7. Validate dimensions and file size
 ```
 
 ## Naming
 
 ```text
-article-1.png
-article-2.png
-article-3.png
-article-4.png
-article-5.png
+article-1.jpg
+article-2.jpg
+article-3.jpg
+article-4.jpg
+article-5.jpg
 ```
 
 ## Output path
 
 ```text
-public/newsletter/YYYY-MM-DD/images/article-1.png
+public/newsletter/YYYY-MM-DD/images/article-1.jpg
 ```
 
 ## Quality target
 
-Gebruik liever:
+Final email target:
 
 ```text
-200–500 KB per image
+200–350 KB preferred
+350 KB max target
 ```
 
 Vermijd:
 
 ```text
+raw 1–2 MB generated images
 5–10 MB per image
 ```
 
 Email moet snel laden.
+
+
+## Required image preparation
+
+Hermes must run image preparation before using the images in final email HTML:
+
+```powershell
+npm.cmd run images:prepare -- YYYY-MM-DD
+```
+
+This command runs optimization and validation internally.
+
+If preparation fails, Hermes must stop and report the exact terminal output. Hermes must not loop, commit, push, fill the email template, or send email after preparation failure.

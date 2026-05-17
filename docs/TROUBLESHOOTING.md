@@ -79,14 +79,14 @@ moet echte https URLs bevatten
 
 ## Afbeelding wordt uitgerekt of rare crop
 
-Oorzaak: Hermes heeft geen 1040 x 300 output gemaakt.
+Oorzaak: Hermes heeft geen 1040 x 300 output gemaakt, of de optimizer/validator is niet uitgevoerd.
 
 Fix:
 
 ```text
 Genereer wide banner
-Center-crop naar 1040 x 300
-Upload opnieuw
+Run image preparation: npm.cmd run images:prepare -- YYYY-MM-DD
+Gebruik alleen article-1.jpg t/m article-5.jpg
 ```
 
 ## Cloudflare PR wil config aanpassen
@@ -102,3 +102,30 @@ Check vooral:
 ```
 
 Als een PR dit verandert naar `"."`, niet mergen of direct corrigeren.
+
+
+## Image preparation faalt
+
+Als `npm.cmd run images:prepare -- YYYY-MM-DD` faalt, mag Hermes niet verder.
+
+Hermes mag dan niet:
+
+```text
+- committen
+- pushen
+- final email HTML vullen
+- testmail sturen
+- productiemail sturen
+- in een retry-loop blijven
+```
+
+Hermes moet de exacte terminal-output rapporteren.
+
+Veelvoorkomende oorzaken:
+
+```text
+article-N.jpg ontbreekt
+image is niet 1040 x 300 px
+image is groter dan de max target
+image is corrupt/onleesbaar
+```

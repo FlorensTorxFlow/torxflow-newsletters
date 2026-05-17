@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "images:optimize": "node scripts/optimize-newsletter-images.mjs",
-    "images:validate": "node scripts/validate-newsletter-images.mjs"
+    "images:validate": "node scripts/validate-newsletter-images.mjs",
+    "images:prepare": "node scripts/prepare-newsletter-images.mjs"
   },
   "repository": {
     "type": "git",

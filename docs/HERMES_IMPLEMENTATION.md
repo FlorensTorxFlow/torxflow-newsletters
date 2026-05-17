@@ -43,11 +43,11 @@ Voor datum `YYYY-MM-DD`:
 public/newsletter/YYYY-MM-DD/
   index.html
   images/
-    article-1.png
-    article-2.png
-    article-3.png
-    article-4.png
-    article-5.png
+    article-1.jpg
+    article-2.jpg
+    article-3.jpg
+    article-4.jpg
+    article-5.jpg
 ```
 
 ## Image workflow
@@ -57,36 +57,84 @@ Per artikel:
 ```text
 1. Maak wide editorial banner prompt
 2. Genereer beeld als brede banner
-3. Crop/resize naar exact 1040 x 300 px
-4. Compress naar redelijke bestandsgrootte
-5. Sla op als article-N.png
-6. Plaats in public/newsletter/YYYY-MM-DD/images/
+3. Sla raw image tijdelijk op in public/newsletter/YYYY-MM-DD/images/
+4. Run verplicht optimizer-script
+5. Run verplicht validator-script
+6. Gebruik alleen de geoptimaliseerde article-N.jpg output in email HTML
 ```
 
-Bestandsnamen zijn verplicht:
+Final email bestandsnamen zijn verplicht:
 
 ```text
-article-1.png
-article-2.png
-article-3.png
-article-4.png
-article-5.png
+article-1.jpg
+article-2.jpg
+article-3.jpg
+article-4.jpg
+article-5.jpg
 ```
 
 Geen spaties, geen hoofdletters, geen extra suffixes.
+
+Raw generated images mogen tijdelijk `.png`, `.jpg`, `.jpeg`, of `.webp` zijn, maar Hermes mag die raw files nooit direct in de email-template gebruiken.
+
+## Mandatory image preparation gate
+
+Hermes must never use raw generated images directly in final email HTML.
+
+Per run, after raw image generation and before template filling, Hermes must run exactly one central command:
+
+```powershell
+npm.cmd run images:prepare -- YYYY-MM-DD
+```
+
+This command internally runs optimization and validation, including one recovery attempt if validation fails.
+
+The final optimizer output must be:
+
+```text
+article-1.jpg
+article-2.jpg
+article-3.jpg
+article-4.jpg
+article-5.jpg
+```
+
+The validator must confirm:
+
+```text
+1040 x 300 px
+JPG
+<= 350 KB target per article image
+```
+
+If image preparation fails, Hermes must stop the run.
+
+Hermes must not:
+
+```text
+- regenerate images repeatedly
+- enter retry loops
+- commit
+- push
+- fill final email HTML
+- send a test or production email
+```
+
+Hermes must report the exact terminal output from the failed preparation command.
+
 
 ## URL construction
 
 Hermes bouwt URLs deterministisch:
 
 ```text
-{PUBLIC_BASE_URL}/newsletter/{YYYY-MM-DD}/images/article-1.png
+{PUBLIC_BASE_URL}/newsletter/{YYYY-MM-DD}/images/article-1.jpg
 ```
 
 Voorbeeld:
 
 ```text
-https://torxflow-newsletters.empty-hill-4369.workers.dev/newsletter/2026-05-17/images/article-1.png
+https://torxflow-newsletters.empty-hill-4369.workers.dev/newsletter/2026-05-17/images/article-1.jpg
 ```
 
 ## Template replacement
@@ -134,7 +182,7 @@ Minimale test:
 
 ```text
 Open/check:
-{PUBLIC_BASE_URL}/newsletter/{YYYY-MM-DD}/images/article-1.png
+{PUBLIC_BASE_URL}/newsletter/{YYYY-MM-DD}/images/article-1.jpg
 ```
 
 Als image URL 404 geeft, mag de email nog niet verzonden worden.
@@ -143,14 +191,16 @@ Als image URL 404 geeft, mag de email nog niet verzonden worden.
 
 ```text
 1. Content + images genereren
-2. Lokale bestanden in /public/newsletter/YYYY-MM-DD plaatsen
-3. Commit + push
-4. Cloudflare deploy success afwachten
-5. URLs valideren
-6. Template vullen
-7. Final email HTML exporteren
-8. Testmail sturen
-9. Pas daarna verzenden
+2. Raw images in /public/newsletter/YYYY-MM-DD/images plaatsen
+3. npm.cmd run images:prepare -- YYYY-MM-DD
+4. Alleen article-1.jpg t/m article-5.jpg gebruiken
+6. Commit + push
+7. Cloudflare deploy success afwachten
+8. URLs valideren
+9. Template vullen
+10. Final email HTML exporteren
+11. Testmail sturen
+12. Pas daarna verzenden
 ```
 
 ## Hard rules
@@ -163,5 +213,8 @@ Hermes mag nooit:
 - afbeeldingen buiten /public zetten
 - Cloudflare config aanpassen naar assets.directory = "."
 - square/portrait images uploaden zonder vooraf 1040x300 export
+- raw generated images direct in final email HTML gebruiken
+- validation failure negeren
+- meer dan één automatische herstelpoging doen
 - email verzenden voordat Cloudflare URLs werken
 ```

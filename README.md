@@ -72,17 +72,17 @@ Per nieuwsbrief-run maakt Hermes:
 public/newsletter/YYYY-MM-DD/
   index.html
   images/
-    article-1.png
-    article-2.png
-    article-3.png
-    article-4.png
-    article-5.png
+    article-1.jpg
+    article-2.jpg
+    article-3.jpg
+    article-4.jpg
+    article-5.jpg
 ```
 
 Voorbeeld online URL:
 
 ```text
-https://torxflow-newsletters.empty-hill-4369.workers.dev/newsletter/2026-05-17/images/article-1.png
+https://torxflow-newsletters.empty-hill-4369.workers.dev/newsletter/2026-05-17/images/article-1.jpg
 ```
 
 ### 4. Artikelbeeld formaat is verplicht
@@ -106,6 +106,7 @@ Regel:
 ```text
 Genereer direct brede newsletter-banner images.
 Daarna alleen lichte eind-crop/rescale naar exact 1040 x 300 px.
+Daarna verplicht optimaliseren naar JPG.
 ```
 
 Geen square/portrait images genereren en daarna hard croppen.
@@ -120,6 +121,8 @@ De productie-template bevat placeholders zoals:
 ```
 
 Hermes vervangt die na upload met publieke HTTPS URLs.
+
+Hermes mag nooit raw generated images direct in de email HTML gebruiken. Hermes moet eerst image optimization en validation draaien.
 
 ## Repositorystructuur
 
@@ -137,11 +140,11 @@ torxflow-newsletters/
       YYYY-MM-DD/
         index.html
         images/
-          article-1.png
-          article-2.png
-          article-3.png
-          article-4.png
-          article-5.png
+          article-1.jpg
+          article-2.jpg
+          article-3.jpg
+          article-4.jpg
+          article-5.jpg
   docs/
     CLOUDFLARE_DEPLOYMENT.md
     HERMES_IMPLEMENTATION.md
@@ -188,13 +191,13 @@ Hermes moet nooit lokale image paths in email HTML zetten.
 Niet:
 
 ```html
-<img src="public/newsletter/2026-05-17/images/article-1.png">
+<img src="public/newsletter/2026-05-17/images/article-1.jpg">
 ```
 
 Wel:
 
 ```html
-<img src="https://torxflow-newsletters.empty-hill-4369.workers.dev/newsletter/2026-05-17/images/article-1.png">
+<img src="https://torxflow-newsletters.empty-hill-4369.workers.dev/newsletter/2026-05-17/images/article-1.jpg">
 ```
 
 ## Productievolgorde
@@ -202,14 +205,35 @@ Wel:
 ```text
 1. Nieuws selecteren
 2. Content schrijven
-3. 5 brede artikelbeelden genereren
-4. Beelden exporteren als 1040 x 300 px
-5. Beelden opslaan in public/newsletter/YYYY-MM-DD/images/
-6. Online nieuwsbriefpagina maken als public/newsletter/YYYY-MM-DD/index.html
-7. Commit + push naar GitHub
-8. Wachten op Cloudflare deploy success
-9. Publieke image URLs bouwen
-10. Email-template vullen
-11. Testmail sturen
-12. Pas daarna verzenden
+3. 5 brede artikelbeelden genereren als raw images
+4. Raw images opslaan in public/newsletter/YYYY-MM-DD/images/
+5. Verplicht image preparation draaien: npm.cmd run images:prepare -- YYYY-MM-DD
+6. Alleen article-1.jpg t/m article-5.jpg gebruiken in email HTML
+8. Online nieuwsbriefpagina maken als public/newsletter/YYYY-MM-DD/index.html
+9. Commit + push naar GitHub
+10. Wachten op Cloudflare deploy success
+11. Publieke .jpg image URLs bouwen
+12. Email-template vullen
+13. Testmail sturen
+14. Pas daarna verzenden
 ```
+
+
+## Hermes failure policy
+
+Hermes mag per nieuwsbrief-run maar één centrale image-command uitvoeren:
+
+```powershell
+npm.cmd run images:prepare -- YYYY-MM-DD
+```
+
+Deze command draait intern:
+
+```text
+1. Optimizer
+2. Validator
+3. Als validator faalt: één automatische herstelpoging
+4. Als validator opnieuw faalt: STOP
+```
+
+Bij falen mag Hermes niet committen, niet pushen, geen email-template vullen en geen email verzenden. Hermes moet de exacte terminal-output rapporteren.

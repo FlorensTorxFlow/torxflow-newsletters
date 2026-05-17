@@ -12,8 +12,8 @@
   },
   "newsletterRun": {
     "rootPattern": "public/newsletter/YYYY-MM-DD",
-    "imagesPattern": "public/newsletter/YYYY-MM-DD/images/article-N.png",
-    "publicImageUrlPattern": "https://torxflow-newsletters.empty-hill-4369.workers.dev/newsletter/YYYY-MM-DD/images/article-N.png"
+    "imagesPattern": "public/newsletter/YYYY-MM-DD/images/article-N.jpg",
+    "publicImageUrlPattern": "https://torxflow-newsletters.empty-hill-4369.workers.dev/newsletter/YYYY-MM-DD/images/article-N.jpg"
   },
   "articleImage": {
     "width": 1040,
@@ -21,7 +21,12 @@
     "emailDisplayWidth": 520,
     "emailDisplayHeight": 150,
     "aspectRatio": "3.47:1",
-    "generationRule": "Generate as wide editorial newsletter banners; only light final crop/rescale to 1040x300."
+    "generationRule": "Generate as wide editorial newsletter banners; save raw image, then optimize/validate to final 1040x300 JPG before use in email HTML.",
+    "format": "jpg",
+    "preferredMaxBytes": 358400,
+    "preferredSizeRangeKb": "200-350",
+    "failurePolicy": "Run images:prepare once. If it fails, stop. Do not commit, push, fill template, or send email.",
+    "prepareCommand": "npm.cmd run images:prepare -- YYYY-MM-DD"
   },
   "placeholders": {
     "articleImageUrls": [

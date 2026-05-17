@@ -1,0 +1,50 @@
+{
+  "newsletter": {
+    "title": "TorxFlow News",
+    "subtitle": "Nieuws voor garage-eigenaren",
+    "date": "17 mei 2026",
+    "readTime": "4 min lezen"
+  },
+  "articles": [
+    {
+      "index": 1,
+      "title": "Nieuwe EU-richtlijn voor EV-onderdelen verplicht garagecertificering vanaf juli 2026",
+      "summary": "De Europese Unie heeft een nieuwe richtlijn gepubliceerd die garages verplicht om gespecialiseerde certificering te halen voor het werken aan hoogvoltage EV-onderdelen. Garages hebben tot 1 juli 2026 de tijd om hun personeel te laten certificeren via erkende opleidingsinstituten zoals RDW en BOVAG. Niet-gecertificeerde garages mogen geen werk meer uitvoeren aan batterijen, omvormers en laadsystemen van elektrische voertuigen.",
+      "sourceUrl": "https://www.rdw.nl/nieuws/eu-ev-richtlijn-2026",
+      "imagePrompt": "Wide editorial banner image showing a Dutch garage mechanic wearing safety gloves and glasses, examining an electric vehicle battery pack on a lift. Professional automotive workshop setting with diagnostic tools visible, clean composition, main subject centered, important elements inside center 60%, no text in image, B2B automotive newsletter style, subtle orange accent colors.",
+      "imageAlt": "Garageman inspecteert elektrische voertuigbatterij in professionele werkplaats"
+    },
+    {
+      "index": 2,
+      "title": "Bosch lanceert AI-gestuurde diagnosetool voor vroegtijdig onderhoudsvoorspelling",
+      "summary": "Bosch heeft een nieuwe AI-gebaseerde diagnosetool uitgebracht die garagehouders helpt bij het voorspellen van onderhoudsbehoeften voordat problemen optreden. De tool analyseert rijgedrag, onderhoudshistorie en sensordata om nauwkeurige onderhoudsintervallen te berekenen. Vroege tests tonen een 30% reductie in ongeplande stilstand aan. De tool integreert met bestaande garagebeheersystemen via API en is beschikbaar als abonnementsservice vanaf juni 2026.",
+      "sourceUrl": "https://www.bosch.nl/nieuws/ai-diagnose-tool-2026",
+      "imagePrompt": "Wide editorial banner image showing a mechanic looking at a tablet displaying AI diagnostic graphs and vehicle health scores, with a car in the background on a service lift. Modern garage environment, professional lighting, wide composition, subject centered, clean editorial style, no text overlay, automotive technology focus.",
+      "imageAlt": "Monteur gebruikt AI-diagnosetool met tablet in autowerkplaats"
+    },
+    {
+      "index": 3,
+      "title": "Tekort aan onderdelen veroorzaakt vertragingen: nieuwe logistieke hub voor aftermarket onderdelen in Eindhoven",
+      "summary": "Door aanhoudende tekorten aan aftermarket onderdelen heeft parts-distributeur Autoparts Nederland een nieuwe logistieke hub geopend in Eindhoven die snellere leveringen aan garages in Zuid-Nederland moet garanderen. De hub bevat 50.000 veelgevraagde onderdelen en gebruikt AI-voorraadvoorspelling om tekorten te voorkomen. Garages kunnen nu onderdelen binnen 2 uur bestellen voorzelfde-dag levering binnen een 50km straal, wat de gemiddelde wachttijd van 3 dagen terugbrengt tot enkele uren.",
+      "sourceUrl": "https://www.autoparts.nl/nieuws/logistieke-hub-eindhoven-2026",
+      "imagePrompt": "Wide editorial banner image showing a modern warehouse with automated shelving systems, forklifts moving pallets of auto parts, and a garage mechanic receiving parts at a service counter. Professional logistics setting, wide shot, main subject (mechanic and parts) centered, clean composition, no text, B2B automotive style.",
+      "imageAlt": "Autonderdelen worden afgeleverd aan garage in moderne logistieke hub"
+    },
+    {
+      "index": 4,
+      "title": "GarageSoftware.nl introduceert klantcommunicatieplatform met automatische statusupdates",
+      "summary": "GarageSoftware.nl heeft een nieuw klantcommunicatieplatform gelanceerd dat automatisch statusupdates stuurt naar klanten tijdens het onderhoudsproces. Het systeem integreert met de garageplanning en stuurt gepersonaliseerde berichten via SMS en email over werkstatus, verwachte voltooiingstijd en kostenupdates. Pilotprojecten laten zien dat klanttevredenheid met 25% is gestegen en het aantal belvragen naar de garage met 40% is gedaald. Het platform is beschikbaar als SaaS-oplossing voor alle garageformats.",
+      "sourceUrl": "https://www.garagesoftware.nl/nieuws/klantcommunicatie-platform-2026",
+      "imagePrompt": "Wide editorial banner image showing a garage service advisor at a desk talking on a phone while looking at a computer screen showing customer communication interface with status updates, car silhouettes, and timeline graphics. Professional office/workshop setting, wide composition, subject centered, clean aesthetic, no text in image, B2B business software style.",
+      "imageAlt": "Serviceadviseur gebruikt klantcommunicatiesysteem bij garagebalie"
+    },
+    {
+      "index": 5,
+      "title": "Klanttevredenheidsonderzoek: 78% van Nederlandse garageklanten waardeert transparante prijsafspraken boven snelheid",
+      "summary": "Een recent onderzoek onder 2.000 Nederlandse autobezitters uitgegeven door de ANWB en RAI Vereniging toont aan dat klanten transparante prijsafspraken en duidelijke communicatie belangrijker vinden dan snelle service. 78% geeft aan eerder terug te komen naar een garage die duidelijk uitlegt wat er wordt gedaan en waarom, zelfs als dit langer duurt. Het onderzoek adviseert garages om prijsopgaven vooraf te delen, foto's van vervangen onderdelen te tonen en duidelijke werkorders te gebruiken om vertrouwen op te bouwen.",
+      "sourceUrl": "https://www.anwb.nl/nieuws/klanttevredenheid-onderzoek-2026",
+      "imagePrompt": "Wide editorial banner image showing a garage mechanic showing a replaced car part to a customer at the service counter, both looking at the part and discussing it. Professional garage setting, warm lighting, wide shot, subjects centered, clean composition, no text overlay, customer service and trust-building theme.",
+      "imageAlt": "Monteur laat vervangen onderdeel zien aan klant bij servicebalie"
+    }
+  ]
+}

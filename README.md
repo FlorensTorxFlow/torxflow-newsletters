@@ -237,3 +237,44 @@ Deze command draait intern:
 ```
 
 Bij falen mag Hermes niet committen, niet pushen, geen email-template vullen en geen email verzenden. Hermes moet de exacte terminal-output rapporteren.
+
+## Email render workflow
+
+Na image preparation vult Hermes de email-template via één vaste render-command:
+
+```powershell
+npm.cmd run email:render -- YYYY-MM-DD
+```
+
+Deze command leest:
+
+```text
+templates/torxflow-news-email-template.html
+data/newsletter-runs/YYYY-MM-DD.json
+public/newsletter/YYYY-MM-DD/images/article-1.jpg
+...
+public/newsletter/YYYY-MM-DD/images/article-5.jpg
+```
+
+En schrijft:
+
+```text
+public/newsletter/YYYY-MM-DD/email-preview.html
+```
+
+Hermes mag de HTML-template niet handmatig aanpassen. Hermes moet de data in JSON zetten en daarna het render-script draaien.
+
+Verplichte volgorde per nieuwsbrief-run:
+
+```powershell
+npm.cmd run images:prepare -- YYYY-MM-DD
+npm.cmd run email:render -- YYYY-MM-DD
+```
+
+Na renderen moet Hermes controleren dat er geen placeholders of base64 images overblijven:
+
+```powershell
+Select-String -Path public\newsletter\YYYY-MM-DD\email-preview.html -Pattern "{{","data:image","Titel artikel","Korte introductie","20 mei 2025","â"
+```
+
+Ideaal: geen output.

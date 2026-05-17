@@ -129,3 +129,44 @@ image is niet 1040 x 300 px
 image is groter dan de max target
 image is corrupt/onleesbaar
 ```
+
+## Render output bevat oude placeholdertekst
+
+Als `email-preview.html` nog dit bevat:
+
+```text
+Titel artikel
+Korte introductie van het artikel
+20 mei 2025
+{{...}}
+â
+```
+
+dan is één van deze dingen fout:
+
+```text
+1. templates/torxflow-news-email-template.html is niet de dynamic template
+2. data/newsletter-runs/YYYY-MM-DD.json mist velden
+3. npm.cmd run email:render -- YYYY-MM-DD is niet opnieuw uitgevoerd
+4. JSON bevat een BOM/encoding-probleem
+```
+
+Check:
+
+```powershell
+Select-String -Path templates\torxflow-news-email-template.html -Pattern "{{NEWSLETTER_TITLE}}","{{ARTICLE_1_TITLE}}","Titel artikel","20 mei 2025","â"
+```
+
+Render opnieuw:
+
+```powershell
+npm.cmd run email:render -- YYYY-MM-DD
+```
+
+Controleer output:
+
+```powershell
+Select-String -Path public\newsletter\YYYY-MM-DD\email-preview.html -Pattern "{{","data:image","Titel artikel","Korte introductie","20 mei 2025","â"
+```
+
+Ideaal: geen output.

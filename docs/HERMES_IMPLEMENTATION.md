@@ -218,3 +218,66 @@ Hermes mag nooit:
 - meer dan één automatische herstelpoging doen
 - email verzenden voordat Cloudflare URLs werken
 ```
+
+## Email render workflow
+
+Hermes must render final email HTML using the render script. Hermes must not manually edit final HTML.
+
+Per run, Hermes must create:
+
+```text
+data/newsletter-runs/YYYY-MM-DD.json
+```
+
+Required JSON shape:
+
+```json
+{
+  "newsletter": {
+    "title": "TorxFlow News",
+    "subtitle": "Nieuws voor garage-eigenaren",
+    "date": "17 mei 2026",
+    "readTime": "4 min lezen"
+  },
+  "articles": [
+    {
+      "index": 1,
+      "title": "Artikel titel",
+      "summary": "Korte samenvatting van het artikel.",
+      "imageAlt": "Beschrijvende alt text"
+    }
+  ]
+}
+```
+
+Hermes must run this after image preparation:
+
+```powershell
+npm.cmd run email:render -- YYYY-MM-DD
+```
+
+The render script must output:
+
+```text
+public/newsletter/YYYY-MM-DD/email-preview.html
+```
+
+The render script replaces:
+
+```text
+{{NEWSLETTER_TITLE}}
+{{NEWSLETTER_SUBTITLE}}
+{{NEWSLETTER_DATE}}
+{{READ_TIME}}
+{{ARTICLE_1_TITLE}}
+{{ARTICLE_1_SUMMARY}}
+{{ARTICLE_1_IMAGE_URL}}
+{{ARTICLE_1_IMAGE_ALT}}
+...
+{{ARTICLE_5_TITLE}}
+{{ARTICLE_5_SUMMARY}}
+{{ARTICLE_5_IMAGE_URL}}
+{{ARTICLE_5_IMAGE_ALT}}
+```
+
+If rendering fails, Hermes must stop. Hermes must not commit, push, send a test email, or send a production email.

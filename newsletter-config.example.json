@@ -43,5 +43,37 @@
       "{{ARTICLE_4_IMAGE_ALT}}",
       "{{ARTICLE_5_IMAGE_ALT}}"
     ]
+  },
+  "template": {
+    "path": "templates/torxflow-news-email-template.html",
+    "renderCommand": "npm.cmd run email:render -- YYYY-MM-DD",
+    "outputPattern": "public/newsletter/YYYY-MM-DD/email-preview.html",
+    "dataPattern": "data/newsletter-runs/YYYY-MM-DD.json",
+    "requiredNewsletterFields": [
+      "title",
+      "subtitle",
+      "date",
+      "readTime"
+    ],
+    "requiredArticleFields": [
+      "index",
+      "title",
+      "summary",
+      "imageAlt"
+    ],
+    "requiredTemplateTokens": [
+      "{{NEWSLETTER_TITLE}}",
+      "{{NEWSLETTER_SUBTITLE}}",
+      "{{NEWSLETTER_DATE}}",
+      "{{READ_TIME}}",
+      "{{ARTICLE_1_TITLE}}",
+      "{{ARTICLE_1_SUMMARY}}",
+      "{{ARTICLE_1_IMAGE_URL}}",
+      "{{ARTICLE_1_IMAGE_ALT}}",
+      "{{ARTICLE_5_TITLE}}",
+      "{{ARTICLE_5_SUMMARY}}",
+      "{{ARTICLE_5_IMAGE_URL}}",
+      "{{ARTICLE_5_IMAGE_ALT}}"
+    ]
   }
 }

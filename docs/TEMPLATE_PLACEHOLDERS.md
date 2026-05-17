@@ -113,3 +113,62 @@ Wel gebruiken:
 ```text
 https://...
 ```
+
+## Required newsletter content placeholders
+
+The production template must include these required newsletter-level placeholders:
+
+```text
+{{NEWSLETTER_TITLE}}
+{{NEWSLETTER_SUBTITLE}}
+{{NEWSLETTER_DATE}}
+{{READ_TIME}}
+```
+
+Default values:
+
+```text
+NEWSLETTER_TITLE=TorxFlow News
+NEWSLETTER_SUBTITLE=Nieuws voor garage-eigenaren
+NEWSLETTER_DATE=current Dutch date, e.g. 17 mei 2026
+READ_TIME=4 min lezen
+```
+
+Each article must include:
+
+```text
+{{ARTICLE_1_TITLE}}
+{{ARTICLE_1_SUMMARY}}
+{{ARTICLE_1_IMAGE_URL}}
+{{ARTICLE_1_IMAGE_ALT}}
+
+{{ARTICLE_2_TITLE}}
+{{ARTICLE_2_SUMMARY}}
+{{ARTICLE_2_IMAGE_URL}}
+{{ARTICLE_2_IMAGE_ALT}}
+
+{{ARTICLE_3_TITLE}}
+{{ARTICLE_3_SUMMARY}}
+{{ARTICLE_3_IMAGE_URL}}
+{{ARTICLE_3_IMAGE_ALT}}
+
+{{ARTICLE_4_TITLE}}
+{{ARTICLE_4_SUMMARY}}
+{{ARTICLE_4_IMAGE_URL}}
+{{ARTICLE_4_IMAGE_ALT}}
+
+{{ARTICLE_5_TITLE}}
+{{ARTICLE_5_SUMMARY}}
+{{ARTICLE_5_IMAGE_URL}}
+{{ARTICLE_5_IMAGE_ALT}}
+```
+
+Hermes must not leave placeholder text such as:
+
+```text
+Titel artikel
+Korte introductie van het artikel
+20 mei 2025
+```
+
+in rendered output.

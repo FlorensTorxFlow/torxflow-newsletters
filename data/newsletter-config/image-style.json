@@ -1,0 +1,23 @@
+{
+  "stylePreset": "warm-orange-watercolor",
+  "userStyleOverride": "",
+  "overrideMode": "append-after-style",
+  "provider": "openrouter",
+  "model": "sourceful/riverflow-v2-fast-preview",
+  "maxPromptLength": 6000,
+  "compositionRules": [
+    "wide newsletter banner",
+    "main subject centered",
+    "important details inside center 60%",
+    "no text inside image",
+    "no logos or readable brand marks",
+    "no important detail near edges",
+    "suitable for crop/resize to 1040x300"
+  ],
+  "presets": {
+    "warm-orange-watercolor": {
+      "label": "Warm orange watercolor",
+      "basePrompt": "Premium warm monochrome orange watercolor editorial illustration. Restrained sepia, peach, beige, sand, and warm orange palette. Soft transparent washes, subtle paper texture, organic brush edges, fine sepia-orange ink linework. Calm, refined, professional B2B newsletter image. Human, handcrafted, elegant, not glossy 3D, not photorealistic, not vector-flat, not cartoonish unless overridden."
+    }
+  }
+}

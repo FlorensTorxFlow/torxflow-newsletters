@@ -1,0 +1,60 @@
+{
+  "newsletter": {
+    "title": "TorxFlow News",
+    "subtitle": "Nieuws voor garage-eigenaren",
+    "date": "19 mei 2026",
+    "readTime": "4 min lezen"
+  },
+  "articles": [
+    {
+      "index": 1,
+      "title": "F-gas afbouw maakt R134a lastiger voor aircoservice",
+      "summary": "R134a wordt door strengere F-gasquota moeilijker verkrijgbaar en mogelijk duurder. National Refrigerants wijst op een alternatief zonder voertuigaanpassingen.",
+      "sourceName": "Aftermarket Magazine",
+      "sourceUrl": "https://aftermarketonline.net/the-f-gas-phase-down-is-imminent-are-you-ready/",
+      "publishedAt": "2026-05-19T12:45:32+00:00",
+      "imagePrompt": "Create the image in a premium warm monochrome orange watercolor editorial illustration style. Use a restrained palette of sepia, peach, beige, sand, and warm orange tones only. Render the scene as a handcrafted watercolor painting with soft transparent washes, subtle paper texture, organic brush edges fading into white, and fine sepia-orange ink linework. Keep the composition calm, elegant, and editorial, like a premium magazine or newsletter illustration. The image should feel human, refined, and branded, not generic.\n\nUse realistic but slightly simplified anatomy, realistic objects, and believable proportions, while avoiding hyperrealism. Keep details selective and clean: enough to clearly communicate the subject, but not overloaded. Add subtle technical clarity where needed, but keep text on interfaces minimal or abstract. The overall feeling should be handcrafted, quiet, premium, and visually coherent.\n\nImportant style constraints: no glossy 3D rendering, no photorealism, no vector-flat illustration, no cartoon look, no neon futuristic effects, no overly sharp digital gradients, no plastic skin, no generic stock-photo feeling, and no typical AI-slop smoothness. Keep edges slightly imperfect and painterly. Let the white of the paper breathe through the image.\n\nComposition rules:\n- wide newsletter banner\n- main subject centered\n- important details in center 60%\n- no text inside image\n- no logos except abstract TorxFlow-orange visual language\n- no important detail near edges\n- suitable for crop/resize to 1040x300\n\nNow depict: a garage technician servicing a car air-conditioning system with a refrigerant cylinder and manifold gauges, suggesting R134a supply pressure and a practical workshop alternative without showing any readable labels",
+      "imageAlt": "Monteur voert aircoservice uit met koudemiddelapparatuur"
+    },
+    {
+      "index": 2,
+      "title": "LKQ versnelt met overnames in onderdelen en elektronica",
+      "summary": "LKQ Europe nam ACtronics over en LKQ Nederland nam grossiers Rijpma en Gamo over. Volgens Aftersales Magazine trapt LKQ na een turbulente periode het gaspedaal in.",
+      "sourceName": "Aftersales Magazine",
+      "sourceUrl": "https://aftersalesmagazine.nl/nieuws/algemeen/lkq-geeft-gas/",
+      "publishedAt": "2026-05-19T04:06:00+00:00",
+      "imagePrompt": "Create the image in a premium warm monochrome orange watercolor editorial illustration style. Use a restrained palette of sepia, peach, beige, sand, and warm orange tones only. Render the scene as a handcrafted watercolor painting with soft transparent washes, subtle paper texture, organic brush edges fading into white, and fine sepia-orange ink linework. Keep the composition calm, elegant, and editorial, like a premium magazine or newsletter illustration. The image should feel human, refined, and branded, not generic.\n\nUse realistic but slightly simplified anatomy, realistic objects, and believable proportions, while avoiding hyperrealism. Keep details selective and clean: enough to clearly communicate the subject, but not overloaded. Add subtle technical clarity where needed, but keep text on interfaces minimal or abstract. The overall feeling should be handcrafted, quiet, premium, and visually coherent.\n\nImportant style constraints: no glossy 3D rendering, no photorealism, no vector-flat illustration, no cartoon look, no neon futuristic effects, no overly sharp digital gradients, no plastic skin, no generic stock-photo feeling, and no typical AI-slop smoothness. Keep edges slightly imperfect and painterly. Let the white of the paper breathe through the image.\n\nComposition rules:\n- wide newsletter banner\n- main subject centered\n- important details in center 60%\n- no text inside image\n- no logos except abstract TorxFlow-orange visual language\n- no important detail near edges\n- suitable for crop/resize to 1040x300\n\nNow depict: an organized automotive parts warehouse with shelves, boxed components, and a small workbench for electronic remanufacturing, showing consolidation in the parts supply chain without brand names or logos",
+      "imageAlt": "Onderdelenmagazijn met dozen en elektronische componenten"
+    },
+    {
+      "index": 3,
+      "title": "Meyle benadrukt remkwaliteit bij slechte wegen",
+      "summary": "Meyle wijst op het belang van goede remmen, zeker door de slechte staat van UK-wegen. Remmen blijven voor garages een veiligheidskritisch advies- en controlemoment.",
+      "sourceName": "PMM Online",
+      "sourceUrl": "https://pmmonline.co.uk/article/meyle-highlights-the-importance-of-good-brakes/",
+      "publishedAt": "2026-05-15T18:28:53+00:00",
+      "imagePrompt": "Create the image in a premium warm monochrome orange watercolor editorial illustration style. Use a restrained palette of sepia, peach, beige, sand, and warm orange tones only. Render the scene as a handcrafted watercolor painting with soft transparent washes, subtle paper texture, organic brush edges fading into white, and fine sepia-orange ink linework. Keep the composition calm, elegant, and editorial, like a premium magazine or newsletter illustration. The image should feel human, refined, and branded, not generic.\n\nUse realistic but slightly simplified anatomy, realistic objects, and believable proportions, while avoiding hyperrealism. Keep details selective and clean: enough to clearly communicate the subject, but not overloaded. Add subtle technical clarity where needed, but keep text on interfaces minimal or abstract. The overall feeling should be handcrafted, quiet, premium, and visually coherent.\n\nImportant style constraints: no glossy 3D rendering, no photorealism, no vector-flat illustration, no cartoon look, no neon futuristic effects, no overly sharp digital gradients, no plastic skin, no generic stock-photo feeling, and no typical AI-slop smoothness. Keep edges slightly imperfect and painterly. Let the white of the paper breathe through the image.\n\nComposition rules:\n- wide newsletter banner\n- main subject centered\n- important details in center 60%\n- no text inside image\n- no logos except abstract TorxFlow-orange visual language\n- no important detail near edges\n- suitable for crop/resize to 1040x300\n\nNow depict: a mechanic inspecting a brake disc and brake pad on a lifted vehicle, with a subtle rough road surface motif in the background and a calm safety-focused workshop atmosphere",
+      "imageAlt": "Monteur controleert remschijf en remblok op hefbrug"
+    },
+    {
+      "index": 4,
+      "title": "Communicatie helpt aftersalesprocessen stroomlijnen",
+      "summary": "Bij Auto Bakker in Sassenheim hielp een OOMT-workshop Strategisch personeelsbeleid om aftersalesprocessen te stroomlijnen tijdens veranderingen in bedrijf en branche.",
+      "sourceName": "Aftersales Magazine",
+      "sourceUrl": "https://aftersalesmagazine.nl/nieuws/werkplaats/het-draait-allemaal-om-communicatie/",
+      "publishedAt": "2026-05-18T04:04:00+00:00",
+      "imagePrompt": "Create the image in a premium warm monochrome orange watercolor editorial illustration style. Use a restrained palette of sepia, peach, beige, sand, and warm orange tones only. Render the scene as a handcrafted watercolor painting with soft transparent washes, subtle paper texture, organic brush edges fading into white, and fine sepia-orange ink linework. Keep the composition calm, elegant, and editorial, like a premium magazine or newsletter illustration. The image should feel human, refined, and branded, not generic.\n\nUse realistic but slightly simplified anatomy, realistic objects, and believable proportions, while avoiding hyperrealism. Keep details selective and clean: enough to clearly communicate the subject, but not overloaded. Add subtle technical clarity where needed, but keep text on interfaces minimal or abstract. The overall feeling should be handcrafted, quiet, premium, and visually coherent.\n\nImportant style constraints: no glossy 3D rendering, no photorealism, no vector-flat illustration, no cartoon look, no neon futuristic effects, no overly sharp digital gradients, no plastic skin, no generic stock-photo feeling, and no typical AI-slop smoothness. Keep edges slightly imperfect and painterly. Let the white of the paper breathe through the image.\n\nComposition rules:\n- wide newsletter banner\n- main subject centered\n- important details in center 60%\n- no text inside image\n- no logos except abstract TorxFlow-orange visual language\n- no important detail near edges\n- suitable for crop/resize to 1040x300\n\nNow depict: a small garage team gathered around a simple planning board in a workshop office, discussing aftersales workflow and staffing, with abstract notes and arrows but no readable text",
+      "imageAlt": "Werkplaatsteam bespreekt aftersalesplanning rond een bord"
+    },
+    {
+      "index": 5,
+      "title": "Nissan ontloopt boete in Navara-sjoemelsoftwarezaak",
+      "summary": "Volgens de KBA hadden twee Nissan Navara-varianten uit 2016-2019 ontoelaatbare manipulatie-instrumenten. Automotive Online meldt dat Nissan een boete ontloopt.",
+      "sourceName": "Automotive Online",
+      "sourceUrl": "https://www.automotive-online.nl/management/internationaal/2026/05/19/nissan-ontloopt-boete-voor-gebruik-sjoemelsoftware-in-navara/",
+      "publishedAt": "2026-05-19T11:32:56+00:00",
+      "imagePrompt": "Create the image in a premium warm monochrome orange watercolor editorial illustration style. Use a restrained palette of sepia, peach, beige, sand, and warm orange tones only. Render the scene as a handcrafted watercolor painting with soft transparent washes, subtle paper texture, organic brush edges fading into white, and fine sepia-orange ink linework. Keep the composition calm, elegant, and editorial, like a premium magazine or newsletter illustration. The image should feel human, refined, and branded, not generic.\n\nUse realistic but slightly simplified anatomy, realistic objects, and believable proportions, while avoiding hyperrealism. Keep details selective and clean: enough to clearly communicate the subject, but not overloaded. Add subtle technical clarity where needed, but keep text on interfaces minimal or abstract. The overall feeling should be handcrafted, quiet, premium, and visually coherent.\n\nImportant style constraints: no glossy 3D rendering, no photorealism, no vector-flat illustration, no cartoon look, no neon futuristic effects, no overly sharp digital gradients, no plastic skin, no generic stock-photo feeling, and no typical AI-slop smoothness. Keep edges slightly imperfect and painterly. Let the white of the paper breathe through the image.\n\nComposition rules:\n- wide newsletter banner\n- main subject centered\n- important details in center 60%\n- no text inside image\n- no logos except abstract TorxFlow-orange visual language\n- no important detail near edges\n- suitable for crop/resize to 1040x300\n\nNow depict: a diesel pickup in a workshop inspection bay connected to diagnostic and emissions testing equipment, with a technician reviewing abstract compliance indicators and no visible brand marks",
+      "imageAlt": "Dieselpickup wordt gecontroleerd met diagnoseapparatuur"
+    }
+  ]
+}

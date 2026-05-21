@@ -1,0 +1,60 @@
+{
+  "newsletter": {
+    "title": "TorxFlow Weekly Automotive Newsletter",
+    "subtitle": "May 21, 2026 Edition",
+    "date": "2026-05-21",
+    "readTime": "4 min read"
+  },
+  "articles": [
+    {
+      "index": 1,
+      "title": "EVs’ share of the used car market grows, but accounts for just under 12% of the ageing parc",
+      "summary": "UK used EV sales rose 32% to 86,943 units in Q1, raising BEV share to 4.3% of buyers, though overall market flat.",
+      "sourceName": "Aftermarket Magazine",
+      "sourceUrl": "https://aftermarketonline.net/evs-share-of-the-used-car-market-grows-but-accounts-for-just-under-12-of-the-ageing-parc/",
+      "publishedAt": "2026-05-15T12:53:40+00:00",
+      "imagePrompt": "A graphic showing an upward arrow combined with an electric vehicle icon and a used car lot background, illustrating growing EV share in the used car market.",
+      "imageAlt": "Bar chart with upward trend, EV icon, and used car lot silhouettes showing increase in electric vehicle sales in the used market."
+    },
+    {
+      "index": 2,
+      "title": "Top Awards deadline extended ahead of UK Garage & Bodyshop Event",
+      "summary": "Top Awards 2026 entry deadline extended to June 12, giving technicians and garage owners more time to participate.",
+      "sourceName": "Aftermarket Magazine",
+      "sourceUrl": "https://aftermarketonline.net/top-awards-deadline-extended-ahead-of-uk-garage-bodyshop-event/",
+      "publishedAt": "2026-05-15T07:42:14+00:00",
+      "imagePrompt": "A calendar page with a highlighted June 12 date and, representing the extended deadline for the UK Top Awards.",
+      "imageAlt": "Calendar showing June 12 circled, with a wrench and trophy icon indicating the Top Awards deadline extension."
+    },
+    {
+      "index": 3,
+      "title": "Tesla Model Y becomes Colombia’s top-selling car amid 304% EV surge",
+      "summary": "Tesla Model Y tops Colombia car sales after launch, despite 1,800 delayed deliveries and regulator warnings about Supercharger claims.",
+      "sourceName": "Electrek",
+      "sourceUrl": "https://electrek.co/2026/05/18/tesla-model-y-colombia-best-selling-car-ev-surge-regulator/",
+      "publishedAt": "2026-05-18T19:56:46Z",
+      "imagePrompt": "A Tesla Model Y driving on a Colombian city street with a sales chart overlay showing rising numbers.",
+      "imageAlt": "Tesla Model Y on a Colombian road with a graph indicating increased sales and a caution symbol for regulator flags."
+    },
+    {
+      "index": 4,
+      "title": "Ford launches seven-model offensive to win back Europe",
+      "summary": "Ford unveils seven new models, including EVs and an electrified Bronco, aiming to regain European market share after a decade.",
+      "sourceName": "Automotive World",
+      "sourceUrl": "https://www.automotiveworld.com/news/ford-launches-seven-model-offensive-to-win-back-europe/",
+      "publishedAt": "2026-05-18T14:52:26+00:00",
+      "imagePrompt": "A lineup of seven Ford vehicle silhouettes, including an EV and Bronco, with a European flag background.",
+      "imageAlt": "Seven Ford vehicle outlines, featuring an electric model and Bronco, arranged in front of a European flag."
+    },
+    {
+      "index": 5,
+      "title": "Concurrentiepositie toeleveranciers onder druk",
+      "summary": "European auto suppliers face pressure from Chinese and Turkish competitors, discussed at the 17th CLEPA congress in Brussels.",
+      "sourceName": "Aftersales Magazine",
+      "sourceUrl": "https://aftersalesmagazine.nl/nieuws/algemeen/concurrentiepositie-toeleveranciers-onder-druk/",
+      "publishedAt": "2026-05-21T04:19:00+00:00",
+      "imagePrompt": "A European factory gear being squeezed between Chinese and Turkish factory icons, symbolizing competitive pressure on auto suppliers.",
+      "imageAlt": "Illustration of a European gear being pressed by Chinese and Turkish gear icons, indicating market pressure on European auto parts makers."
+    }
+  ]
+}

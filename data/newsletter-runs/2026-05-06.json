@@ -1,0 +1,60 @@
+{
+  "newsletter": {
+    "title": "TorxFlow Weekly Automotive Newsletter",
+    "subtitle": "Key updates for independent garages in the Netherlands and Europe",
+    "date": "2026-05-06",
+    "readTime": "4 min read"
+  },
+  "articles": [
+    {
+      "index": 1,
+      "title": "Dealers positiever over importeurs - Aftersales Magazine",
+      "summary": "Dutch dealer-importer relations improve, boosting parts availability and pricing stability for independent garages.",
+      "sourceName": "Aftersales Magazine",
+      "sourceUrl": "https://aftersalesmagazine.nl/nieuws/retail/dealers-positiever-over-importeurs/",
+      "publishedAt": "2026-05-20T08:10:34+00:00",
+      "imagePrompt": "a Dutch garage manager reviewing a parts invoice while speaking with a supplier representative over a desk",
+      "imageAlt": "Garage manager discussing parts supply with a supplier at a desk"
+    },
+    {
+      "index": 2,
+      "title": "Yes, an EV really CAN power your home – if it’s one of these [update]",
+      "summary": "Explains how EVs with bidirectional charging can serve as home backup power, a service garages can offer to customers.",
+      "sourceName": "Electrek",
+      "sourceUrl": "https://electrek.co/2026/05/20/yes-an-ev-really-can-power-your-home-if-its-one-of-these/",
+      "publishedAt": "2026-05-21T01:00:00Z",
+      "imagePrompt": "an electric car connected to a house via a charging cable, powering household lights during an outage",
+      "imageAlt": "EV supplying power to a home through a charger during a blackout"
+    },
+    {
+      "index": 3,
+      "title": "BYD in Hongarije onder vuur: politie start onderzoek naar milieuovertredingen",
+      "summary": "Hungarian police investigate BYD for alleged environmental violations, potentially affecting parts supply and warranty support for European garages.",
+      "sourceName": "Automotive Online",
+      "sourceUrl": "https://www.automotive-online.nl/management/2026/05/21/byd-in-hongarije-onder-vuur-politie-start-onderzoek-naar-milieuovertredingen/",
+      "publishedAt": "2026-05-21T09:10:28+00:00",
+      "imagePrompt": "a BYD vehicle parked outside a Hungarian police station with officials examining documents",
+      "imageAlt": "Police officers reviewing paperwork near a BYD car in Hungary"
+    },
+    {
+      "index": 4,
+      "title": "Subaru indefinitely postpones in-house EVs after profits plunge 90%",
+      "summary": "Subaru cancels its 2028 EV plans, opting to produce gasoline cars at its new factory, impacting future EV service demand for garages.",
+      "sourceName": "Electrek",
+      "sourceUrl": "https://electrek.co/2026/05/19/subaru-postpones-in-house-ev-launch-2028-profits-plunge-90/",
+      "publishedAt": "2026-05-19T12:45:27Z",
+      "imagePrompt": "a Subaru factory floor with gasoline car assembly lines instead of EV equipment",
+      "imageAlt": "Subaru factory showing gasoline car production where EV lines were planned"
+    },
+    {
+      "index": 5,
+      "title": "Kia is killing off its cheapest gas car, but a new EV will replace it",
+      "summary": "Kia discontinues its lowest‑priced gasoline model, replacing it with an EV, shifting future service workload toward electric vehicles for garages.",
+      "sourceName": "Electrek",
+      "sourceUrl": "https://electrek.co/2026/05/22/kia-killing-off-cheapest-gas-car-new-ev-will-replace-it/",
+      "publishedAt": "2026-05-22T17:45:27Z",
+      "imagePrompt": "a Kia Picanto gasoline car being swapped for an electric Kia model on a showroom floor",
+      "imageAlt": "Showroom displaying a gasoline Kia Picanto replaced by an electric Kia vehicle"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "newsletter": {
+    "title": "TorxFlow Weekly Automotive Newsletter",
+    "subtitle": "Practical updates for European independent garages",
+    "date": "2026-05-24",
+    "readTime": "4 min read"
+  },
+  "articles": [
+    {
+      "index": 1,
+      "title": "What do thinner oils mean for filters?",
+      "summary": "Choosing a high-quality filter could be the most effective way of preventing catastrophic engine failure, strengthening a workshop’s hard-earned reputation.",
+      "sourceName": "PMM Online",
+      "sourceUrl": "https://pmmonline.co.uk/article/what-do-thinner-oils-mean-for-filters/",
+      "publishedAt": "2026-05-22T18:22:55+00:00",
+      "imagePrompt": "Close-up of an oil filter being installed in a modern engine with droplets of thin synthetic oil visible, emphasizing filtration.",
+      "imageAlt": "Mechanic installing an oil filter in a car engine, with thin oil droplets highlighted."
+    },
+    {
+      "index": 2,
+      "title": "Investeren in kalibreren - Aftersales Magazine",
+      "summary": "As more vehicles equip increasing ADAS systems, the newsletter questions whether workshops invest enough in calibration, posing this to the Aftersales panel.",
+      "sourceName": "Aftersales Magazine",
+      "sourceUrl": "https://aftersalesmagazine.nl/nieuws/werkplaats/investeren-in-kalibreren/",
+      "publishedAt": "2026-05-22T04:33:00+00:00",
+      "imagePrompt": "Mechanic using a calibration tool on a car's windshield-mounted camera, showing ADAS sensor alignment.",
+      "imageAlt": "Technician calibrating a forward-facing camera on a vehicle's windshield for ADAS systems."
+    },
+    {
+      "index": 3,
+      "title": "Volgende generatie aan het roer van Möller Autoschade - Aftersales Magazine",
+      "summary": "Jolique Möller has taken over daily management and shares of the Möller Autoschade Group from her parents Alfred and Magchelina Möller.",
+      "sourceName": "Aftersales Magazine",
+      "sourceUrl": "https://aftersalesmagazine.nl/nieuws/volgende-generatie-aan-het-roer-van-moller-autoschade/",
+      "publishedAt": "2026-05-19T07:34:41+00:00",
+      "imagePrompt": "Younger woman shaking hands with older parents in front of an auto body shop garage, symbolizing succession.",
+      "imageAlt": "Jolique Möller shaking hands with her parents outside the Möller Autoschade workshop."
+    },
+    {
+      "index": 4,
+      "title": "France urges Renault, Stellantis to keep parts sourcing local | Automotive World",
+      "summary": "France owns stakes in both of the OEMs it is pressuring, but are they enough to outweigh the cost arithmetic of deeper Chinese ties? By Stewart Burnett",
+      "sourceName": "Automotive World",
+      "sourceUrl": "https://www.automotiveworld.com/news/france-urges-renault-stellantis-to-keep-parts-sourcing-local/",
+      "publishedAt": "2026-05-18T09:11:54+00:00",
+      "imagePrompt": "Map of France with factory icons and parts supply lines showing local sourcing versus overseas.",
+      "imageAlt": "Illustration of French government encouraging local parts sourcing for Renault and Stellantis factories."
+    },
+    {
+      "index": 5,
+      "title": "How is Mann-Filter adapting to new technology",
+      "summary": "Mann-Filter explains its response to evolving filter technology in the UK market, highlighting rapid changes in vehicle filtration and implications for workshops.",
+      "sourceName": "PMM Online",
+      "sourceUrl": "https://pmmonline.co.uk/article/how-is-mann-filter-adapting-to-new-technology/",
+      "publishedAt": "2026-05-19T18:07:17+00:00",
+      "imagePrompt": "Series of different vehicle filters (oil, air, cabin) displayed on a workbench with digital readouts showing tech advancements.",
+      "imageAlt": "Various Mann-Filter products on a mechanic's bench with digital indicators of new filter technology."
+    }
+  ]
+}
